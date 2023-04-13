@@ -1,0 +1,20 @@
+function fizzBuzzWithPhoneNumber(phoneNumber){
+    const sum = phoneNumber.toString().split('')
+    .reduce((acc,digit) => acc + parseInt(digit),0);
+    
+    for(let i=1;i<=sum;i++){
+        if(i%4 === 0 && i%5 === 0){
+            process.stdout.write('FizzBuzz ');
+        }
+        else if(i % 4 === 0){
+            process.stdout.write('Fizz ');
+        }
+        else if (i % 5 === 0){
+            process.stdout.write('Buzz ');
+        }
+        else{
+            process.stdout.write(`${i} `);
+        }
+    }
+}
+fizzBuzzWithPhoneNumber('7257868848')
